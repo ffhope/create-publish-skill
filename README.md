@@ -5,7 +5,7 @@ A skill that guides you through creating and publishing agent skills to GitHub.
 ## Installation
 
 ```bash
-npx skills add your-username/create-publish-skill@create-publish-skill
+npx skills add ffhope/create-publish-skill@create-publish-skill
 ```
 
 ## What This Skill Does
