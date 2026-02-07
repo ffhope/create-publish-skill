@@ -198,6 +198,29 @@ npx skills update
 - Focus on key capabilities and triggers
 - Remove unnecessary words
 
-## Example Skill Template
+## Additional Resources
 
-See the complete example in the repository for a working template.
+For detailed technical documentation, see [reference.md](reference.md).
+For concrete usage examples, see [examples.md](examples.md).
+For utility scripts, see [scripts/](scripts/).
+
+## Utility Scripts
+
+This skill includes helper scripts:
+
+- **validate-skill.sh** - Validates SKILL.md format and requirements
+- **generate-skill.sh** - Generates a new skill template
+- **publish-skill.sh** - Publishes skill to GitHub
+- **check-skill-structure.sh** - Checks skill directory structure
+
+Usage:
+```bash
+# Validate skill
+./scripts/validate-skill.sh SKILL.md
+
+# Generate new skill
+./scripts/generate-skill.sh my-new-skill "Description here"
+
+# Publish skill
+./scripts/publish-skill.sh . username token
+```
