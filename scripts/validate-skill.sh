@@ -25,8 +25,8 @@ if ! sed -n '2,10p' "$SKILL_FILE" | grep -q "^---$"; then
     ERRORS=$((ERRORS + 1))
 fi
 
-# Extract frontmatter
-FRONTMATTER=$(sed -n '/^---$/,/^---$/p' "$SKILL_FILE" | head -n -1 | tail -n +2)
+# Extract frontmatter (between first two --- lines)
+FRONTMATTER=$(awk '/^---$/{if(++c==2)exit} c==1' "$SKILL_FILE")
 
 # Check name field
 if ! echo "$FRONTMATTER" | grep -q "^name:"; then
